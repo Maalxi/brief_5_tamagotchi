@@ -1,61 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./inc/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tamagotchi</title>
+  <link rel="stylesheet" href="./inc/scss/style.scss" />
+  <link rel="stylesheet" href="./inc/scss/testbutton.scss" />
 </head>
+
 <body>
-  <div class="main-menu-screen">
-    <div class="menu">
-      <h1>Tamagotchi</h1>
-      <h3>Bienvenue ! <br>Choisiser la difficulté dans les settings et appuyé sur START</h3>
-      <div class="menu-buttons">
-        <a href="#" id="action-menu-start-game">Start</a>
-        <a href="#" id="action-menu-settings">Settings</a>
+
+  <section class="section_choix_personnage">
+    <h2>Choisir un personnage :</h2>
+    <div class="container_button_choix">
+      <button id="choix_perso_1">Kuromametchi</button>
+      <button id="choix_perso_2">Personnage 2</button>
+    </div>
+  </section>
+
+  <!-- Section pour le personnage n°1 -->
+
+  <section class="section_personnage_1">
+    <div class="container">
+      <h1>Kuromametchi</h1>
+      <img src="./inc/img/kuromametchi.jpg" alt="kuromametchi">
+      <div class="stats">
+        <div class="stat">
+          <div class="progress-bar">
+            <div id="vie-bar" class="bar">
+              <span>Vie:</span>
+              <span id="vie"></span>
+            </div>x
+          </div>
+        </div>
+        <div class="stat">
+          <div class="progress-bar">
+            <div id="nourriture-bar" class="bar">
+              <span>Nourriture:</span>
+              <span id="nourriture"></span>
+            </div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="progress-bar">
+            <div id="bonheur-bar" class="bar">
+              <span>Bonheur:</span>
+              <span id="bonheur"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <ul class="wrapper">
+          <li class="icon vie" id="soigner">
+            <span class="tooltip action">Soigner</span>
+            <span><i class="fab fa-facebook-f"></i></span>
+          </li>
+          <li class="icon nourriture" id="nourrir">
+            <span class="tooltip action">Nourrir</span>
+            <span><i class="fab fa-twitter"></i></span>
+          </li>
+          <li class="icon bonheur" id="jouer">
+            <span class="tooltip action">Jouer</span>
+            <span><i class="fab fa-instagram"></i></span>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-  
-  <div class="menu-screen-settings">
-    <div class="settings">
-      <h2>Settings</h2>
-      <div class="settings-buttons">
-        <h3>Difficulty: <span id="difSet">Normal</span></h3>
-        <a href="#" id="action-settings-difficulty-hard">Hard</a>
-        <a href="#" id="action-settings-difficulty-normal">Normal</a>
-        <a href="#" id="action-settings-difficulty-easy">Easy</a>
-        <br>
-        <h3>Night mode: <span id="nightmode">off</span></h3>
-        <a href="#" id="nightmode-on">On</a>
-        <a href="#" id="nightmode-off">Off</a>
-        <br>
-        <a href="#" id="action-settings-back">Back</a>
+  </section>
+
+  <!-- Section pour le personnage n°2 -->
+
+  <section class="section_personnage_2">
+    <div class="container">
+      <h1>Kuromametchi</h1>
+      <img src="./inc/img/kuromametchi.jpg" alt="kuromametchi">
+      <div class="stats">
+        <div class="stat">
+          <div class="progress-bar">
+            <div id="vie-bar" class="bar">
+              <span>Vie:</span>
+              <span id="vie"></span>
+            </div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="progress-bar">
+            <div id="nourriture-bar" class="bar">
+              <span>Nourriture:</span>
+              <span id="nourriture"></span>
+            </div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="progress-bar">
+            <div id="bonheur-bar" class="bar">
+              <span>Bonheur:</span>
+              <span id="bonheur"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <ul class="wrapper">
+          <li class="icon vie" id="soigner">
+            <span class="tooltip action">Soigner</span>
+            <span><i class="fab fa-facebook-f"></i></span>
+          </li>
+          <li class="icon nourriture" id="nourrir">
+            <span class="tooltip action">Nourrir</span>
+            <span><i class="fab fa-twitter"></i></span>
+          </li>
+          <li class="icon bonheur" id="jouer">
+            <span class="tooltip action">Jouer</span>
+            <span><i class="fab fa-instagram"></i></span>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-  
-  <div class="game-screen">
-    <div class="tamagotchi">
-      <div class="hp">
-        <p>Sleep: <span id="sleep-hp"></span>%</p>
-        <p>Hunger: <span id="hunger-hp"></span>%</p>
-        <p>Play: <span id="play-hp"></span>%</p><br>
-        <p id="score-bar">Score: <span id="score"></span></p>
-      </div>
-  
-      <p><span id="name"></span></p>
-        <p id="t-body"><span id="effect-left">°˖✧</span><span id="hand-left">◝</span>(<span id="eye-left">＾</span><span id="mouth">▿</span><span id="eye-right">＾</span>)<span id="hand-right">◜</span><span id="effect-right">✧˖°</span></p>
-  
-        <div class="buttons">
-        <a href="#" id="action-sleep">Sleep</a>
-        <a href="#" id="action-feed">Feed</a>
-        <a href="#" id="action-play">Play</a>
-      </div>
-    </div>
-  </div>
-  <script src="./inc/js/script.js"></script>
+  </section>
+
+  <script src="./inc/ts/script.ts"></script>
 </body>
+
 </html>
