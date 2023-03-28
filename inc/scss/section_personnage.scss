@@ -1,10 +1,32 @@
+// Tout le style par section
+
+// H2 pour chaque sections
+
+.h2_section_perso {
+  padding-top: 10%;
+}
+
+// Section 1 / Aragorn
+
 .section_personnage_1 {
   background: url(../img/fond_aragorn.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
+
+  .selection_personnage {
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+
+  .p_section_1 {
+    margin-top: 10%;
+    font-family: "04b", sans-serif;
+  }
 }
+
+// Section 2 / Balrog
 
 .section_personnage_2 {
   background: url(../img/fond_balrog.jpg);
@@ -13,6 +35,8 @@
   background-position: center;
   height: 100vh;
 }
+
+// Section 3 / Smeagol
 
 .section_personnage_3 {
   background: url(../img/fond_smeagol.jpg);

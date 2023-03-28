@@ -32,10 +32,16 @@ p {
   text-align: center;
   font-size: 70%;
   color: white;
-  font-family: "Pacifico", cursive;
 }
 
+// Afficher ou non quelque chose
 
 .hide {
   display: none;
+}
+
+// Taille du personnage
+
+.selection_personnage {
+  width: 130px;
 }
