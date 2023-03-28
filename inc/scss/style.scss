@@ -1,91 +1,41 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+// Police 04b_30
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #fafafa;
+@import url("https://fonts.cdnfonts.com/css/04b30");
+
+// Police Bellota
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+// Reset
+
+* {
   margin: 0;
+  padding: 0;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
+// Style principaux
 
 h2 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 40px;
   text-align: center;
+  color: white;
+  text-shadow: 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0),
+    0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0),
+    0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0),
+    0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0),
+    0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0),
+    0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0),
+    0 0 2px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0);
+  font-family: "04b", sans-serif;
 }
 
-.container_button_choix {
-  display: flex;
-  justify-content: center;
-  gap: 5%;
-}
-
-.choix_perso_1 {
-  align-items: center;
-}
-
-.choix_perso_2 {
-  align-items: center;
-}
-
-.stats {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.stat {
-  margin: 0 20px;
+p {
   text-align: center;
+  font-size: 70%;
+  color: white;
+  font-family: "Pacifico", cursive;
 }
 
-.label {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
 
-.actions {
-  display: flex;
-  justify-content: center;
-}
-
-.action {
-  font-size: 16px;
-  font-weight: 700;
-  padding: 10px 20px;
-  background-color: #00c853;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  margin: 0 10px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #00796b;
-  }
-}
-
-.progress-bar {
-  width: 200px;
-  height: 20px;
-  border: 1px solid black;
-  margin-bottom: 10px;
-}
-
-.bar {
-  height: 100%;
-  background-color: green;
+.hide {
+  display: none;
 }

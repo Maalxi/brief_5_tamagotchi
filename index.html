@@ -6,122 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tamagotchi</title>
   <link rel="stylesheet" href="./inc/scss/style.scss" />
-  <link rel="stylesheet" href="./inc/scss/testbutton.scss" />
+  <link rel="stylesheet" href="./inc/scss/section_choix_personnage.scss" />
+  <link rel="stylesheet" href="./inc/scss/section_personnage.scss" />
 </head>
 
 <body>
 
+  <!-- Choisir son personnage -->
+
   <section class="section_choix_personnage">
-    <h2>Choisir un personnage :</h2>
-    <div class="container_button_choix">
-      <button id="choix_perso_1">Kuromametchi</button>
-      <button id="choix_perso_2">Personnage 2</button>
+    <h2 class="h2_choix_perso">Choisir un personnage :</h2>
+    <div class="container_choix_personnage">
+      <img class="selection_personnage" id="choix_perso_1" src="./inc/img/aragorn.png" alt="Aragorn">
+      <img class="selection_personnage" id="choix_perso_2" src="./inc/img/balrog.png" alt="Balrog">
+      <img class="selection_personnage" id="choix_perso_3" src="./inc/img/smeagol.png" alt="Smeagol">
+    </div>
+    <div class="credit">
+      <p>Développer par Samuel DA CONCEICAO | Brief n°5 (Délai : une semaine)</p>
     </div>
   </section>
 
   <!-- Section pour le personnage n°1 -->
 
-  <section class="section_personnage_1">
-    <div class="container">
-      <h1>Kuromametchi</h1>
-      <img src="./inc/img/kuromametchi.jpg" alt="kuromametchi">
-      <div class="stats">
-        <div class="stat">
-          <div class="progress-bar">
-            <div id="vie-bar" class="bar">
-              <span>Vie:</span>
-              <span id="vie"></span>
-            </div>x
-          </div>
-        </div>
-        <div class="stat">
-          <div class="progress-bar">
-            <div id="nourriture-bar" class="bar">
-              <span>Nourriture:</span>
-              <span id="nourriture"></span>
-            </div>
-          </div>
-        </div>
-        <div class="stat">
-          <div class="progress-bar">
-            <div id="bonheur-bar" class="bar">
-              <span>Bonheur:</span>
-              <span id="bonheur"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="actions">
-        <ul class="wrapper">
-          <li class="icon vie" id="soigner">
-            <span class="tooltip action">Soigner</span>
-            <span><i class="fab fa-facebook-f"></i></span>
-          </li>
-          <li class="icon nourriture" id="nourrir">
-            <span class="tooltip action">Nourrir</span>
-            <span><i class="fab fa-twitter"></i></span>
-          </li>
-          <li class="icon bonheur" id="jouer">
-            <span class="tooltip action">Jouer</span>
-            <span><i class="fab fa-instagram"></i></span>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <section class="section_personnage_1 hide">
+    <h2 class="h2_section_perso">Aragorn</h2>
   </section>
 
   <!-- Section pour le personnage n°2 -->
 
-  <section class="section_personnage_2">
-    <div class="container">
-      <h1>Kuromametchi</h1>
-      <img src="./inc/img/kuromametchi.jpg" alt="kuromametchi">
-      <div class="stats">
-        <div class="stat">
-          <div class="progress-bar">
-            <div id="vie-bar" class="bar">
-              <span>Vie:</span>
-              <span id="vie"></span>
-            </div>
-          </div>
-        </div>
-        <div class="stat">
-          <div class="progress-bar">
-            <div id="nourriture-bar" class="bar">
-              <span>Nourriture:</span>
-              <span id="nourriture"></span>
-            </div>
-          </div>
-        </div>
-        <div class="stat">
-          <div class="progress-bar">
-            <div id="bonheur-bar" class="bar">
-              <span>Bonheur:</span>
-              <span id="bonheur"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="actions">
-        <ul class="wrapper">
-          <li class="icon vie" id="soigner">
-            <span class="tooltip action">Soigner</span>
-            <span><i class="fab fa-facebook-f"></i></span>
-          </li>
-          <li class="icon nourriture" id="nourrir">
-            <span class="tooltip action">Nourrir</span>
-            <span><i class="fab fa-twitter"></i></span>
-          </li>
-          <li class="icon bonheur" id="jouer">
-            <span class="tooltip action">Jouer</span>
-            <span><i class="fab fa-instagram"></i></span>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <section class="section_personnage_2 hide">
+    <h2>Balrog</h2>
   </section>
 
-  <script src="./inc/ts/script.ts"></script>
+  <!-- Section pour le personnage n°3 -->
+
+  <section class="section_personnage_3 hide">
+    <h2>Smeagol</h2>
+  </section>
+
+
+<script src="./inc/ts/script.ts"></script>
+
 </body>
 
 </html>

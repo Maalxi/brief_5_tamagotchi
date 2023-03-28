@@ -1,0 +1,39 @@
+// Section pour choisir sont personnage
+
+.section_choix_personnage {
+  background: url(../img/fond_choix_perso.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  .h2_choix_perso {
+    padding-top: 10%;
+  }
+
+  .container_choix_personnage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+    margin-top: 15%;
+  }
+
+  .selection_personnage {
+    width: 130px;
+  }
+
+  .credit {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  @media (min-width: 650px) {
+    .container_choix_personnage {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
