@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./inc/scss/style.scss" />
   <link rel="stylesheet" href="./inc/scss/section_choix_personnage.scss" />
   <link rel="stylesheet" href="./inc/scss/section_personnage.scss" />
+  <link rel="stylesheet" href="./inc/scss/terminal.scss" />
+  <link rel="stylesheet" href="./inc/scss/progress_bar.scss" />
 </head>
 
 <body>
@@ -30,13 +32,37 @@
 
   <section class="section_personnage_1 hide">
     <h2 class="h2_section_perso">Aragorn</h2>
-    <p class="p_section_1">Félicitations ! Tu viens d'adopter ton premier B2o. Booba aime boxer Kaaris, faire du biff et poster sur insta. S'il est privé trop longtemps de ces activités, il ne survivra pas. A toi de prendre soin de lui : utilise les boutons à ta disposition pour subvenir à ses besoins.</p>
-    <h1>Manger</h1>
-    <h1>Boire</h1>
-    <h1>selon le personnage</h1>
-    <h1>AFFICHER LE TERMINAL</h1>
+    <p class="p_section_1">Tu viens de choisir <span id="nom_du_perso"></span>. Il doit réussir ___________ .A toi de
+      prendre soin de lui
+      : utilise les boutons à ta disposition pour subvenir à ses besoins.</p>
+    <div class="container_food">
+      <h1 class="emoji">🍔</h1>
+        <div class="progress-bar__container">
+          <div class="progress-bar">
+          </div>
+        </div>
+    </div>
+    <div class="container_food">
+      <h1 class="emoji">🥤</h1>
+        <div class="progress-bar__container">
+          <div class="progress-bar">
+          </div>
+        </div>
+    </div>
+    <div class="container_food">
+      <h1 class="emoji">🗡</h1>
+        <div class="progress-bar__container">
+          <div class="progress-bar">
+          </div>
+        </div>
+    </div>
     <img class="selection_personnage" src="./inc/img/aragorn.png" alt="Aragorn">
-    <div class="terminal"></div>
+    <div class="terminal" id="terminal">
+      <div class="terminal-history" id="terminal-history">
+      </div>
+      <input class="terminal-input" type="text" placeholder="Entre une commande !" id="input">
+    </div>
+    <div class="terminal-history" id="terminal-history"></div>
   </section>
 
   <!-- Section pour le personnage n°2 -->

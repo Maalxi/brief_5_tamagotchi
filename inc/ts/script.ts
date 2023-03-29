@@ -1,5 +1,3 @@
-import { Terminal } from 'xterm';
-
 // Choisir son personnage
 
 const perso_1: Element | null = document.querySelector("#choix_perso_1");
@@ -26,28 +24,30 @@ const section_perso_3: Element | null = document.querySelector(
   ".section_personnage_3"
 );
 
-// Le terminal de commande 
+// Sélection des éléments HTML nécessaires dans le document
 
-const term = new Terminal();
+const choixPersoSection = document.querySelector(
+  ".section_choix_personnage"
+) as HTMLElement;
+const sectionPerso1 = document.querySelector(
+  ".section_personnage_1"
+) as HTMLElement;
+const sectionPerso2 = document.querySelector(
+  ".section_personnage_2"
+) as HTMLElement;
+const sectionPerso3 = document.querySelector(
+  ".section_personnage_3"
+) as HTMLElement;
+const nomPersoSpan = document.getElementById("nom_du_perso") as HTMLSpanElement;
+const foodContainers = document.querySelectorAll(
+  ".container_food"
+) as NodeListOf<HTMLElement>;
+const terminalHistory = document.getElementById(
+  "terminal-history"
+) as HTMLElement;
+const terminalInput = document.getElementById("input") as HTMLInputElement;
 
-term.open(document.querySelector('.terminal') as HTMLElement);
-
-term.onData((data: string) => {
-  // Vérifiez si la commande est autorisée
-  if (data === 'commande1') {
-    // Exécutez la commande 1
-    term.write('Vous avez exécuté la commande 1.\r\n');
-  } else if (data === 'commande2') {
-    // Exécutez la commande 2
-    term.write('Vous avez exécuté la commande 2.\r\n');
-  } else if (data === 'commande3') {
-    // Exécutez la commande 3
-    term.write('Vous avez exécuté la commande 3.\r\n');
-  } else {
-    // La commande n'est pas autorisée
-    term.write('Commande non autorisée.\r\n');
-  }
-});
+// Le terminal de commande
 
 // Permet de selectionné le personnage souhaité
 
