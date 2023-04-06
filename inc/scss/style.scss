@@ -46,3 +46,104 @@ p {
 .selection_personnage {
   width: 130px;
 }
+
+/* POPUP */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+// progress[value] {
+//   /* Reset the default appearance */
+//   -webkit-appearance: none;
+//    appearance: none;
+
+//   width: 250px;
+//   height: 20px;
+// }
+
+// progress[value]::-webkit-progress-bar {
+//   background-color: #eee;
+//   border-radius: 7px;
+//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+// }
+// progress[value]::-webkit-progress-value {
+//   background-image:
+//        -webkit-linear-gradient(-45deg, 
+//                                transparent 33%, rgba(0, 0, 0, .1) 33%, 
+//                                rgba(0,0, 0, .1) 66%, transparent 66%),
+//        -webkit-linear-gradient(top, 
+//                                rgba(255, 255, 255, .25), 
+//                                rgba(0, 0, 0, .25)),
+//        -webkit-linear-gradient(left, #B8417A, #0E85FD);
+
+//     border-radius: 7px; 
+//     background-size: 35px 20px, 100% 100%, 100% 100%;
+// }
+
+// Variables
+$barre-height: 20px;
+$barre-background: #9a9a9a3f;
+$barre-color:#846abd;
+
+// Styles
+progress {
+  height: $barre-height;
+  background-color: $barre-background;
+  border-radius: $barre-height;
+
+  &::-webkit-progress-bar {
+    background-color: $barre-background;
+    border-radius: $barre-height;
+  }
+
+  &::-webkit-progress-value {
+    background-color: $barre-color;
+    border-radius: $barre-height;
+  }
+
+  &::-moz-progress-bar {
+    background-color: $barre-color;
+    border-radius: $barre-height;
+
+    &::-webkit-progress-value {
+      // ... styles pour la valeur de la barre de progression
+      transition: width 1s ease-in-out;
+    }
+  
+    &::-moz-progress-bar {
+      // ... styles pour la valeur de la barre de progression
+      transition: width 1s ease-in-out;
+    }
+  }
+}

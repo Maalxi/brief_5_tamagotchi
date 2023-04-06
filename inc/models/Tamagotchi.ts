@@ -1,24 +1,37 @@
 // Définissez une classe pour vos progress bars
 export class Tamagotchi {
-  private value: number;
-  private max: number;
+  food: number = 700;
+  drink: number = 700;
+  weapons: number = 700;
 
-  constructor(max: number) {
-    this.max = max;
-    this.value = max;
-  }
-
-  decrease() {
-    if (this.value > 0) {
-      this.value -= 5;
+  IncrementFood(value: number) {
+    if (this.food + value <= 100) {
+      this.food += value;
     }
   }
-
-  increase() {
-    if (this.value < this.max) {
-      this.value += 5;
+  IncrementDrink(value: number) {
+    if (this.drink + value <= 100) {
+      this.drink += value;
     }
   }
-
-  // Ajoutez d'autres méthodes pour obtenir la valeur actuelle et la valeur maximale, etc.
+  IncrementWeapons(value: number) {
+    if (this.weapons + value <= 100) {
+      this.weapons += value;
+    }
+  }
+  DecrementFood(value: number) {
+    if (this.food - value >= 0) {
+    this.food -= value;
+    }
+  }
+  DecrementDrink(value: number) {
+    if (this.drink - value >= 0) {
+    this.drink -= value;
+    }
+  }
+  DecrementWeapons(value: number) {
+    if (this.weapons - value >= 0) {
+    this.weapons -= value;
+    }
+  }
 }
