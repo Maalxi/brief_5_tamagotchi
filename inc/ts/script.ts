@@ -58,14 +58,18 @@ const ButtonRetour = document.querySelectorAll('.buttons_retour')
 
 // Function principal
 
-function animate() {
+function gameLoop() {
   if (!gameOver) {
-    decrease(MyAragorn);
-    decrease(MyBalrog);
-    decrease(MySmeagol);
+    animate();
     checkValues();
-    requestAnimationFrame(animate);
+    requestAnimationFrame(gameLoop);
   }
+}
+
+function animate() {
+  decrease(MyAragorn);
+  decrease(MyBalrog);
+  decrease(MySmeagol);
 }
 
 let gameOver = false;
@@ -79,7 +83,7 @@ groupe_de_perso.forEach((perso, index) => {
           section_perso_1?.classList.remove("hide");
           setInterval(() => {
             if (perso_1 !== null && !gameOver) {
-              requestAnimationFrame(animate);
+              gameLoop();
             }
           }, 1000);
           break;
@@ -87,7 +91,7 @@ groupe_de_perso.forEach((perso, index) => {
           section_perso_2?.classList.remove("hide");
           setInterval(() => {
             if (perso_2 !== null && !gameOver) {
-              requestAnimationFrame(animate);
+              gameLoop();
             }
           }, 1000);
           break;
@@ -95,7 +99,7 @@ groupe_de_perso.forEach((perso, index) => {
           section_perso_3?.classList.remove("hide");
           setInterval(() => {
             if (perso_3 !== null && !gameOver) {
-              requestAnimationFrame(animate);
+              gameLoop();
             }
           }, 1000);
           break;
@@ -107,6 +111,8 @@ groupe_de_perso.forEach((perso, index) => {
 });
 
 // Vérifie si toutes les valeurs sont à 0
+
+let popUpDisplayed = false;
 
 function checkValues() {
   const tamagotchis = [MyAragorn, MyBalrog, MySmeagol];
@@ -123,7 +129,7 @@ function checkValues() {
       gameOver = true;
     }
   });
-  if (gameOver) {
+  if (gameOver && !popUpDisplayed) {
     // Affiche la pop-up
     const popup = document.createElement("div");
     popup.classList.add("popup");
@@ -135,8 +141,10 @@ function checkValues() {
       </div>
     `;
     document.body.appendChild(popup);
+    popUpDisplayed = true;
   }
 }
+
 
 ButtonFood.forEach((element) => {
   element.addEventListener("click", () => {

@@ -16,16 +16,40 @@
   height: 100vh;
 
   .selection_personnage {
-    margin-top: 10%;
-    margin-left: 10%;
+    margin-top: 5%;
+    margin-left: 25%;
   }
 
 }
 
 .p_section_1 {
-  margin-top: 10%;
+  margin-top: 3%;
   font-family: "04b", sans-serif;
   color: black;
+}
+
+.p_terminal {
+  font-family: "04b", sans-serif;
+  color: black;
+  text-align: left;
+  line-height: 140%;
+}
+
+.container_p_terminal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 2%;
+}
+
+.h2_terminal {
+  font-size: small;
+}
+
+.food, .drink, .weapon {
+padding: 0.15rem !important;
+font-weight: bolder;
+background-color: #846abd!important;
 }
 
 // Section 2 / Balrog
