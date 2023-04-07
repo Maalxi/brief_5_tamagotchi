@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./inc/scss/section_personnage.scss" />
   <link rel="stylesheet" href="./inc/scss/terminal.scss" />
   <link rel="stylesheet" href="./inc/scss/progress_bar.scss" />
+  <link rel="stylesheet" href="./inc/scss/button.scss" />
 </head>
 
 <body>
@@ -32,20 +33,20 @@
 
   <section class="section_personnage_1 hide">
     <h2 class="h2_section_perso">Aragorn</h2>
-    <p class="p_section_1">Tu viens de choisir Aragorn. Il doit réussir ___________ .A toi de
+    <p class="p_section_1">Tu viens de choisir Aragorn. A toi de
       prendre soin de lui
       : utilise les boutons à ta disposition pour subvenir à ses besoins.</p>
     <div class="container_food">
       <h2 class="emoji_0">🍔</h2>
-      <progress class="Barre_food" max="700" value="700"></progress>
+      <progress class="Barre_food" max="10000" value="10000"></progress>
     </div>
     <div class="container_food">
       <h2 class="emoji_1">🥤</h2>
-      <progress class="Barre_drink" max="700" value="700"></progress>
+      <progress class="Barre_drink" max="10000" value="10000"></progress>
     </div>
     <div class="container_food">
       <h2 class="emoji_2">🗡</h2>
-      <progress class="Barre_weapons" max="700" value="700"></progress>
+      <progress class="Barre_weapons" max="10000" value="10000"></progress>
     </div>
     <img class="selection_personnage" src="./inc/img/aragorn.png" alt="Aragorn">
     <div class="terminal" id="terminal">
@@ -54,27 +55,29 @@
       <input class="terminal-input" type="text" placeholder="Entre une commande !" id="input">
     </div>
     <div class="terminal-history"></div>
-    <button>Exit</button>
-  </section>
-
+    <div class="container_button_retour">
+      <button class="noselect buttons_retour"><span class='text'>Retour</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></span></button>
+    </div>
+    </section>
+    
   <!-- Section pour le personnage n°2 -->
 
   <section class="section_personnage_2 hide">
     <h2 class="h2_section_perso">Balrog</h2>
-    <p class="p_section_1">Tu viens de choisir Balrog. Il doit réussir ___________ .A toi de
+    <p class="p_section_1">Tu viens de choisir Balrog. A toi de
       prendre soin de lui
       : utilise les boutons à ta disposition pour subvenir à ses besoins.</p>
     <div class="container_food">
       <h2 class="emoji_0">🍔</h2>
-      <progress class="Barre_food" max="700" value="700"></progress>
+      <progress class="Barre_food" max="10000" value="10000"></progress>
     </div>
     <div class="container_food">
       <h2 class="emoji_1">🥤</h2>
-      <progress class="Barre_drink" max="700" value="700"></progress>
+      <progress class="Barre_drink" max="10000" value="10000"></progress>
     </div>
     <div class="container_food">
       <h2 class="emoji_2">🗡</h2>
-      <progress class="Barre_weapons" max="700" value="700"></progress>
+      <progress class="Barre_weapons" max="10000" value="10000"></progress>
     </div>
     <img class="selection_personnage" src="./inc/img/balrog.png" alt="Balrog">
     <div class="terminal" id="terminal">
@@ -83,27 +86,27 @@
       <input class="terminal-input" type="text" placeholder="Entre une commande !" id="input">
     </div>
     <div class="terminal-history" id="terminal-history"></div>
-    <button>Exit</button>
+    <button class="noselect buttons_retour"><span class='text'>Retour</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></span></button>
   </section>
 
   <!-- Section pour le personnage n°3 -->
 
   <section class="section_personnage_3 hide">
     <h2 class="h2_section_perso">Smeagol</h2>
-    <p class="p_section_1">Tu viens de choisir Smeagol. Il doit réussir ___________ .A toi de
+    <p class="p_section_1">Tu viens de choisir Smeagol. A toi de
       prendre soin de lui
       : utilise les boutons à ta disposition pour subvenir à ses besoins.</p>
     <div class="container_food">
       <h2 class="emoji_0">🍔</h2>
-      <progress class="Barre_food" max="700" value="700"></progress>
+      <progress class="Barre_food" max="10000" value="10000"></progress>
     </div>
     <div class="container_food">
       <h2 class="emoji_1">🥤</h2>
-      <progress class="Barre_drink" max="700" value="700"></progress>
+      <progress class="Barre_drink" max="10000" value="10000"></progress>
     </div>
     <div class="container_food">
       <h2 class="emoji_2">🗡</h2>
-      <progress class="Barre_weapons" max="700" value="700"></progress>
+      <progress class="Barre_weapons" max="10000" value="10000"></progress>
     </div>
     <img class="selection_personnage" src="./inc/img/smeagol.png" alt="Smeagol">
     <div class="terminal" id="terminal">
@@ -112,7 +115,7 @@
       <input class="terminal-input" type="text" placeholder="Entre une commande !" id="input">
     </div>
     <div class="terminal-history" id="terminal-history"></div>
-    <button>Exit</button>
+    <button class="noselect buttons_retour"><span class='text'>Retour</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></span></button>
   </section>
 
 

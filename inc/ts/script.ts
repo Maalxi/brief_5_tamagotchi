@@ -48,6 +48,14 @@ const progressBarDrink: NodeListOf<Element> =
 const progressBarWeapons: NodeListOf<Element> =
   document.querySelectorAll(".Barre_weapons");
 
+// Ajout de l'input du terminal
+
+const input = document.querySelectorAll<HTMLInputElement>(".terminal-input");
+
+// Ajout button retour quand dans section personnage
+
+const ButtonRetour = document.querySelectorAll('.buttons_retour')
+
 // Function principal
 
 function animate() {
@@ -132,25 +140,25 @@ function checkValues() {
 
 ButtonFood.forEach((element) => {
   element.addEventListener("click", () => {
-    MyAragorn.IncrementFood(100);
-    MyBalrog.IncrementFood(100);
-    MySmeagol.IncrementFood(100);
+    MyAragorn.IncrementFood(1000);
+    MyBalrog.IncrementFood(1000);
+    MySmeagol.IncrementFood(1000);
   });
 });
 
 ButtonDrink.forEach((element) => {
   element.addEventListener("click", () => {
-    MyAragorn.IncrementDrink(100);
-    MyBalrog.IncrementDrink(100);
-    MySmeagol.IncrementDrink(100);
+    MyAragorn.IncrementDrink(1000);
+    MyBalrog.IncrementDrink(1000);
+    MySmeagol.IncrementDrink(1000);
   });
 });
 
 ButtonWeapon.forEach((element) => {
   element.addEventListener("click", () => {
-    MyAragorn.IncrementWeapons(100);
-    MyBalrog.IncrementWeapons(100);
-    MySmeagol.IncrementWeapons(100);
+    MyAragorn.IncrementWeapons(1000);
+    MyBalrog.IncrementWeapons(1000);
+    MySmeagol.IncrementWeapons(1000);
   });
 });
 
@@ -174,3 +182,32 @@ function decrease(Tamagotchi) {
     });
   }
 }
+
+input.forEach((element) => {
+  element.addEventListener("keyup", (event: KeyboardEvent) => {
+    if (event.keyCode === 13) {
+      const value = element.value.toLowerCase().trim();
+      if (value === "food") {
+        MyAragorn.IncrementFood(1000);
+        MyBalrog.IncrementFood(1000);
+        MySmeagol.IncrementFood(1000);
+      } else if (value === "drink") {
+        MyAragorn.IncrementDrink(1000);
+        MyBalrog.IncrementDrink(1000);
+        MySmeagol.IncrementDrink(1000);
+      } else if (value === "weapon") {
+        MyAragorn.IncrementWeapons(1000);
+        MyBalrog.IncrementWeapons(1000);
+        MySmeagol.IncrementWeapons(1000);
+      }
+      element.value = "";
+    }
+  });
+});
+
+
+ButtonRetour.forEach((button) => {
+  button.addEventListener('click', () => {
+    location.reload();
+  });
+});
